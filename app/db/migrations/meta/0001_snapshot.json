@@ -1,0 +1,70 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "bb615a56-07c4-4d0a-9f26-9dbf946d3548",
+  "prevId": "376d7588-ad76-438a-b663-8d24152de2a1",
+  "tables": {
+    "urlTable": {
+      "name": "urlTable",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "url_to": {
+          "name": "url_to",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "timestamp": {
+          "name": "timestamp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(current_timestamp)"
+        },
+        "qr_base_64": {
+          "name": "qr_base_64",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "urlTable_id_unique": {
+          "name": "urlTable_id_unique",
+          "columns": [
+            "id"
+          ],
+          "isUnique": true
+        },
+        "urlTable_qr_base_64_unique": {
+          "name": "urlTable_qr_base_64_unique",
+          "columns": [
+            "qr_base_64"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

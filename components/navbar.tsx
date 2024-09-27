@@ -19,6 +19,8 @@ import {
   Logo,
 } from "@/components/icons";
 import { useState, useEffect } from "react";
+import gdsc from "@/public/gdsc.png";
+import Image from "next/image";
 
 const isMobileDevice = () => {
   return window.matchMedia("(max-width: 767px)").matches;
@@ -62,6 +64,14 @@ export const Navbar = () => {
                 <a href="github.com/johnnybinh">Github</a>
               </NavbarItem>
             </NavbarMenu>
+            <NavbarBrand>
+              <p className="font-bold flex justify-center items-center gap-2 text-inherit">
+                <Image alt="gdsc" src={gdsc} width={50} height={50} />
+                <Link color="foreground" href="/">
+                  URL Shortener
+                </Link>
+              </p>
+            </NavbarBrand>
           </NextUINavbar>
         </div>
       ) : (
@@ -74,9 +84,10 @@ export const Navbar = () => {
           <NavbarContent justify="end" className="">
             {" "}
             <NavbarBrand>
-              <p className="font-bold text-inherit">
+              <p className="font-bold flex justify-center items-center gap-2 text-inherit">
+                <Image alt="gdsc" src={gdsc} width={50} height={50} />
                 <Link color="foreground" href="/">
-                  URL Shorener
+                  URL Shortener
                 </Link>
               </p>
             </NavbarBrand>
@@ -94,9 +105,11 @@ export const Navbar = () => {
             </NavbarItem>
           </NavbarContent>
           <NavbarContent justify="end">
-            <Button color="default">
-              <GithubIcon />
-            </Button>
+            <a href="http://github.com/johnnybinh">
+              <Button color="default">
+                <GithubIcon />
+              </Button>
+            </a>
           </NavbarContent>
         </NextUINavbar>
       )}

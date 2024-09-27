@@ -7,4 +7,5 @@ export const urlTable = sqliteTable("urlTable", {
   timestamp: text("timestamp")
     .notNull()
     .default(sql`(current_timestamp)`),
+  qrBase64: text("qr_base_64").unique().notNull(),
 });

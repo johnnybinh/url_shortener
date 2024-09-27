@@ -1,9 +1,9 @@
 import { Button } from "@nextui-org/button";
-
 import { db } from "../db";
 import { urlTable } from "../db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
+import Image from "next/image";
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -23,6 +23,12 @@ const page = async ({ params }: { params: { slug: string } }) => {
           >
             <Button className="w-full md:w-1/2 h-12 md:h-16">Go To Site</Button>
           </a>
+          <Image
+            src={urlRes.qrBase64}
+            alt={urlRes.id}
+            width={500}
+            height={500}
+          ></Image>
         </div>
       ) : (
         <div className="flex flex-col h-full justify-center items-center w-full gap-2 p-4">

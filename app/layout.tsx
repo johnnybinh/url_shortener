@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: "/gdsc.svg",
   },
 };
 
@@ -48,14 +48,24 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen w-screen">
             <Navbar />
             <main className="  h-full w-full">{children}</main>
-            <footer className="max-sm:hidden flex justify-center items-center p-4 gap-2">
-              <p>by</p>
+            <footer className="max-sm:text-md flex justify-center items-center p-4 max-sm:gap-0 gap-2">
+              <p className="max-sm:text-sm ">by</p>
               <Button variant="light" color="primary">
-                <a href="github.com/johnnybinh">Nguyen The Binh</a>
+                <a
+                  className="max-sm:text-sm "
+                  href="https://github.com/johnnybinh"
+                >
+                  Nguyen The Binh
+                </a>
               </Button>
-              <p>From</p>
+              <p className="max-sm:text-sm ">From</p>
               <Button variant="light" color="primary">
-                <a href="gdsc.captechvn.com">GDSC-HCMIU</a>
+                <a
+                  className="max-sm:text-sm "
+                  href="https://www.facebook.com/dsc.hcmiu"
+                >
+                  GDSC-HCMIU
+                </a>
               </Button>
             </footer>
           </div>

@@ -8,6 +8,13 @@
       "when": 1727445721680,
       "tag": "0000_spooky_callisto",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1727450021167,
+      "tag": "0001_simple_moonstone",
+      "breakpoints": true
     }
   ]
 }
