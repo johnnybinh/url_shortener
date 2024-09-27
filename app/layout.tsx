@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import { Button } from "@nextui-org/button";
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +48,16 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen w-screen">
             <Navbar />
             <main className="  h-full w-full">{children}</main>
+            <footer className="max-sm:hidden flex justify-center items-center p-4 gap-2">
+              <p>by</p>
+              <Button variant="light" color="primary">
+                <a href="github.com/johnnybinh">Nguyen The Binh</a>
+              </Button>
+              <p>From</p>
+              <Button variant="light" color="primary">
+                <a href="gdsc.captechvn.com">GDSC-HCMIU</a>
+              </Button>
+            </footer>
           </div>
         </Providers>
       </body>

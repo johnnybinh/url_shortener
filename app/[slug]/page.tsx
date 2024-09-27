@@ -12,15 +12,26 @@ const page = async ({ params }: { params: { slug: string } }) => {
   });
 
   return (
-    <div className="flex flex-col h-full justify-center items-center w-full gap-2 p-4">
-      <h1 className="text-xl font-semibold">Code: {slug}</h1>
-      <h1 className="text-lg">Destination: {urlRes?.urlTo}</h1>
-      <a
-        className="w-full md:w-1/4 flex justify-center items-center"
-        href={urlRes?.urlTo}
-      >
-        <Button className="w-full md:w-1/2 h-12 md:h-16">Go To Site</Button>
-      </a>
+    <div className="h-full">
+      {urlRes ? (
+        <div className="flex flex-col h-full justify-center items-center w-full gap-2 p-4">
+          <h1 className="text-xl font-semibold">Code: {slug}</h1>
+          <h1 className="text-lg">Destination: {urlRes?.urlTo}</h1>
+          <a
+            className="w-full md:w-1/4 flex justify-center items-center"
+            href={urlRes?.urlTo}
+          >
+            <Button className="w-full md:w-1/2 h-12 md:h-16">Go To Site</Button>
+          </a>
+        </div>
+      ) : (
+        <div className="flex flex-col h-full justify-center items-center w-full gap-2 p-4">
+          <p className="text-2xl font-bold">URL Not found</p>
+          <Link href="/" color="primary">
+            Go Back
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

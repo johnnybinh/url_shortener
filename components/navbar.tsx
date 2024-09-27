@@ -58,6 +58,9 @@ export const Navbar = () => {
                   History
                 </Link>
               </NavbarItem>
+              <NavbarItem className="flex flex-row items-center">
+                <a href="github.com/johnnybinh">Github</a>
+              </NavbarItem>
             </NavbarMenu>
           </NextUINavbar>
         </div>
