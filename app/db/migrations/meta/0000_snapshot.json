@@ -1,0 +1,62 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "6c397c16-8590-4835-a45a-a13cc77f6b2b",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "urlTable": {
+      "name": "urlTable",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "url_to": {
+          "name": "url_to",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "timestamp": {
+          "name": "timestamp",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "urlTable_id_unique": {
+          "name": "urlTable_id_unique",
+          "columns": [
+            "id"
+          ],
+          "isUnique": true
+        },
+        "urlTable_timestamp_unique": {
+          "name": "urlTable_timestamp_unique",
+          "columns": [
+            "timestamp"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
