@@ -4,8 +4,10 @@ export default {
   schema: "./app/db/schema.ts",
   out: "./app/db/migrations",
   dialect: "sqlite",
+  driver: "turso",
   dbCredentials: {
-    url: "./db.sqlite3",
+    url: process.env.TURSO_DATABASE_URL!,
+    authToken: process.env.TURSO_AUTH_TOKEN,
   },
   verbose: true,
   strict: true,
